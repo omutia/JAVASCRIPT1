@@ -1,45 +1,62 @@
-function payTax(grossSalary,taxRate)
-{
-//assign exm the final result from the mathematical equation
-    let payValue = grossSalary * taxRate
+/*
+a function to calculate the payeTax It takes two parameters
+gross salary, PayTax.
+It multiplies the gross salary and Paytax
+*/
 
-//return exm value
-    return payValue
+  function calculatePaye(grossSalary,payTax)
+{
+    let netPay = grossSalary * payTax
+    return netPay
+    
 }
 
-//declare a function called exam that will pass 'a' as argument
+//we call the function by giving it the arguments and console it's result
 
-function nssfAmount(grossSalary,nssfRate)
+console.log(calculatePaye(2000000,0.3))
+
+/* 
+a function to calculate the net salary. It takes three parameters
+gross salary, NssfRate, PayTax.
+It subtracts the total of NssfRate and Paytax from gross salary.
+*/
+
+function calculateNssf(grossSalary,nssfRate)
 {
+    let NetPay = grossSalary * nssfRate
+    return NetPay
 
-let nssfValue = grossSalary * nssfRate
-
-//return fexam value
-return nssfValue
+console.log(calculatePaye(2000000,0.11))
 
 }
 
-function grossSalary(NetSalary,nssfValue,payValue)
+/* 
+a function to calculate the net salary. It takes three parameters
+gross salary, NssfRate, PayTax.
+It subtracts the total of NssfRate and Paytax from gross salary.
+*/
+
+function netSalary(grossSalary,nssfRate,payTax)
+
 {
+    let netPay = grossSalary -(nssfRate + payTax)
+    let NetPay = grossSalary * payTax
 
-let grossSalaryValue = NetSalary+ nssfValue + payValue
-
-//return fexam value
-return grossSalaryValue
-
+    return netPay
 }
+console.log(netSalary(2000000,220000,600000))
 
-//declare a function called final
-
-function netSalary()
+function netSalary(grossSalary,nssfRate,payTax)
 {
+    let payValue = grossSalary * payTax
+    let nssfValue = grossSalary * nssfRate
+    let netPay = grossSalary -(payValue + nssfValue)
 
-//assign fexam the final result from adding value for function exam and crsmark.
-
-let netSalaryValue =grossSalary(1180000,600000,220000)- (payTax(2000000,0.3)+ nssfAmount(2000000,0.11))
-console.log(netSalaryValue)
-
+    return netPay
 }
+console.log(netSalary(2000000,0.11,0.3))
+
+
 
 //now invoke function final
 
